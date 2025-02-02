@@ -4,6 +4,7 @@
         <title>All Questions</title>
     </head>
     <body>
+        <h1>{{Subject}}</h1>
         <form method="post" action="{% url 'check_answers' %}">
             {% csrf_token %}
             {% for question in questions %}
