@@ -3,6 +3,14 @@
     <head>
         <title>All Questions</title>
         <script>
+            function checkAnswer() {
+                let selectedOption = 
+                    document.querySelector('input[name="answer"]:checked');
+                if (!selectedOption) {
+                    alert("Please select a option");
+                }
+                return;
+            }
             
         </script>
     </head>
