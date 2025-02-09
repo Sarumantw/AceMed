@@ -20,12 +20,12 @@ def homepage(request):
         if next_q:
             return JsonResponse({
                 'id' : next_q.id,
-                'question' : next_q.text,
+                'question' : next_q.question_text,
                 'optiona' : next_q.option1,
                 'optionb' : next_q.option2,
                 'optionc' : next_q.option3,
                 'optiond' : next_q.option4,
-                'correct' : next_q.correct })
+                'correct' : next_q.answer })
         else: 
            return JsonResponse({
                'end' : True })
