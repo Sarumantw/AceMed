@@ -8,25 +8,60 @@
                     document.querySelector('input[name="answer"]:checked');
                 if (!selectedOption) {
                     alert("Please select a option");
-                }
+                
                 return;
             }
+                let userAnswer = selectedOption.value;
+                let correctAnswer = document.getElementbyId("correct_answer");
+                let questionId = document.getElementById('q_id');
+                let subject = {{subject}};
+                if (userAnswer === correctAnswer){
+                    document.getElementById('result').innerText = 'Correct!';
+                } else {
+                    document.getElementById('result').innerText = 'Wrong!';
+                }
+                fetch('/quiz/${subject}/next/${questionId}')
+                                                 .then(response => response.json())
+                                                 .then(data => { 
+                                                     if (data.end) {
+                                                         document.getElementById('quiz_container').innerHTML =
+                                                             '<h2>Quiz completed!</h2>';
+                                                     } else {
+                                                         document.getElementById("question_text").innerText = data.question;
+                        document.getElementById("opt_a").innerText = data.option_a;
+                        document.getElementById("opt_b").innerText = data.option_b;
+                        document.getElementById("opt_c").innerText = data.option_c;
+                        document.getElementById("opt_d").innerText = data.option_d;
+                        document.getElementById("correct_answer").value = data.correct_answer;
+                        document.getElementById("question_id").value = data.id;
+                        document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
+                    }
+                });
+            
+                    
             
         </script>
     </head>
     <body>
         <h1>{{Subject}}</h1>
-        <form method="post" action="{% url 'check_answers' %}">
             {% csrf_token %}
-            {% for question in questions %}
-                <div class="question">
-                    <p>{{ question.question_text }}</p>
-                    <label><input type="radio" name="q{{ question.id }}" value="A"> {{ question.option1 }}</label><br>
-                    <label><input type="radio" name="q{{ question.id }}" value="B"> {{ question.option2 }}</label><br>
-                    <label><input type="radio" name="q{{ question.id }}" value="C"> {{ question.option3 }}</label><br>
-                    <label><input type="radio" name="q{{ question.id }}" value="D"> {{ question.option4 }}</label><br>
+            
+                <div id="quiz_container">
+                    {% if question %}
+                    <p id = 'question_text'>{{ question.question_text }}</p>
+                    <input type = "hidden" id= "correct_answer" value = "{{question.answer}}">
+                    <input type = "hidden" id = "q_id" value = "{{question.id}}">
+                    <label><input type="radio" name="answer" value="A"> <span id = "opt_a">{{ question.option1 }}</span></label><br>
+                    <label><input type="radio" name="answer" value="B"> <span id = "opt_b">{{ question.option2 }}</span></label><br>
+                    <label><input type="radio" name="answer" value="C"> <span id ="opt_c">{{ question.option3 }}</span></label><br>
+                    <label><input type="radio" name="answer" value="D"> <span id = "opt_d">{{ question.option4 }}</span></label><br>
+                    <button onclick = "checkAnswer()">Submit</button>
+                    <p id="result"></p>
+                    {% else%}
+                    <h3>No questions available</h3>
+                    {% endif%}
                 </div>
-            {% endfor %}
-            <button type="submit">Submit</button>
+            
+            
     </body>
 </html>
