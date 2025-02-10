@@ -28,10 +28,10 @@
                                                              '<h2>Quiz completed!</h2>';
                                                      } else {
                                                          document.getElementById("question_text").innerText = data.question;
-                        document.getElementById("opt_a").innerText = data.option_a;
-                        document.getElementById("opt_b").innerText = data.option_b;
-                        document.getElementById("opt_c").innerText = data.option_c;
-                        document.getElementById("opt_d").innerText = data.option_d;
+                        document.getElementById("opt_a").innerText = data.option1;
+                        document.getElementById("opt_b").innerText = data.option2;
+                        document.getElementById("opt_c").innerText = data.option3;
+                        document.getElementById("opt_d").innerText = data.option4;
                         document.getElementById("correct_answer").value = data.correct_answer;
                         document.getElementById("question_id").value = data.id;
                         document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
