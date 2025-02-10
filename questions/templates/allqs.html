@@ -32,7 +32,7 @@
                         document.getElementById("opt_b").innerText = data.option2;
                         document.getElementById("opt_c").innerText = data.option3;
                         document.getElementById("opt_d").innerText = data.option4;
-                        document.getElementById("correct_answer").value = data.correct_answer;
+                        document.getElementById("correct_answer").value = data.answer;
                         document.getElementById("question_id").value = data.id;
                         document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
                     }
