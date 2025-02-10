@@ -15,17 +15,17 @@ def check_answers(request):
         return render(request, 'results', {'score': score})
 def homepage(request):
     return render(request, 'main.html')
-    def next_question(request, subject, q_id):
+def next_question(request, subject, q_id):
         next_q = question.objects.filter(subject = subject, id__gt = q_id).first()
         if next_q:
             return JsonResponse({
                 'id' : next_q.id,
-                'question' : next_q.question_text,
-                'optiona' : next_q.option1,
-                'optionb' : next_q.option2,
-                'optionc' : next_q.option3,
-                'optiond' : next_q.option4,
-                'correct' : next_q.answer })
+                'question_text' : next_q.question_text,
+                'option1' : next_q.option1,
+                'option2' : next_q.option2,
+                'option3' : next_q.option3,
+                'option4' : next_q.option4,
+                'answer' : next_q.answer })
         else: 
            return JsonResponse({
                'end' : True })
