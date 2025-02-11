@@ -4,7 +4,7 @@ from django.http import JsonResponse
 # Create your views here.
 def quiz_view(request, subject):
     first_question = question.objects.filter(subject=subject).first()
-    return render(request, 'allqs.html', {'questions': first_question, 'subject': subject})
+    return render(request, 'allqs.html', {'question': first_question, 'subject': subject})
 def check_answers(request):
     if request.method == 'POST':
         questions = question.objects.all()
@@ -15,8 +15,8 @@ def check_answers(request):
         return render(request, 'results', {'score': score})
 def homepage(request):
     return render(request, 'main.html')
-def next_question(request, subject, q_id):
-        next_q = question.objects.filter(subject = subject, id__gt = q_id).first()
+def next_question(request, subject, questionId):
+        next_q = question.objects.filter(subject = subject, id__gt = questionId).first()
         if next_q:
             return JsonResponse({
                 'id' : next_q.id,

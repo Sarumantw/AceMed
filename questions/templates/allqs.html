@@ -12,15 +12,15 @@
                 return;
             }
                 let userAnswer = selectedOption.value;
-                let correctAnswer = document.getElementbyId("correct_answer");
-                let questionId = document.getElementById('q_id');
-                let subject = {{subject}};
+                let correctAnswer = document.getElementById("correct_answer").value;
+                let questionId = document.getElementById('q_id').value;
+                let subject = "{{subject}}";
                 if (userAnswer === correctAnswer){
                     document.getElementById('result').innerText = 'Correct!';
                 } else {
                     document.getElementById('result').innerText = 'Wrong!';
                 }
-                fetch('/quiz/${subject}/next/${questionId}')
+                fetch(`/questions/quiz/${subject}/next/${questionId}`)
                                                  .then(response => response.json())
                                                  .then(data => { 
                                                      if (data.end) {
@@ -33,13 +33,13 @@
                         document.getElementById("opt_c").innerText = data.option3;
                         document.getElementById("opt_d").innerText = data.option4;
                         document.getElementById("correct_answer").value = data.answer;
-                        document.getElementById("question_id").value = data.id;
+                        document.getElementById("q_id").value = data.id;
                         document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
                     }
                 });
             
                     
-            
+            }  
         </script>
     </head>
     <body>
