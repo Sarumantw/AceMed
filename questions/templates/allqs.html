@@ -2,6 +2,36 @@
 <html>
     <head>
         <title>All Questions</title>
+        <style>
+            .option {
+                font-weight: normal;
+                padding: 3px;
+                margin: 2px; /* Increased margin */
+                
+                display: block; /* Added display block */
+            }
+            .option span {
+                background-color: aliceblue; /* Background color only for text area */
+                padding: 3px;
+                border: 1px solid #ccc;
+            }
+            button {
+                margin-top: 10px;
+                padding: 5px 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            .header {
+                background-color: #4CAF50;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+        </style>
         <script>
             function checkAnswer() {
                 let selectedOption = 
@@ -19,15 +49,19 @@
                     document.getElementById('result').innerText = 'Correct!';
                 } else {
                     document.getElementById('result').innerText = 'Wrong!';
-                }
-                fetch(`/questions/quiz/${subject}/next/${questionId}`)
+                }}
+                function nextQuestion() {
+                    let questionId = document.getElementById('q_id').value;
+                    let subject = "{{subject}}";
+                    let topic = "{{topic}}";
+                fetch(`/questions/quiz/${subject}/${topic}/next/${questionId}`)
                                                  .then(response => response.json())
                                                  .then(data => { 
                                                      if (data.end) {
                                                          document.getElementById('quiz_container').innerHTML =
                                                              '<h2>Quiz completed!</h2>';
                                                      } else {
-                                                         document.getElementById("question_text").innerText = data.question;
+                                                         document.getElementById("question_text").innerText = data.question_text;
                         document.getElementById("opt_a").innerText = data.option1;
                         document.getElementById("opt_b").innerText = data.option2;
                         document.getElementById("opt_c").innerText = data.option3;
@@ -35,6 +69,7 @@
                         document.getElementById("correct_answer").value = data.answer;
                         document.getElementById("q_id").value = data.id;
                         document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
+                        document.getElementById('result').innerText = '';
                     }
                 });
             
@@ -43,6 +78,7 @@
         </script>
     </head>
     <body>
+        <div class="header">Welcome to the Quiz</div>
         <h1>{{Subject}}</h1>
             {% csrf_token %}
             
@@ -51,11 +87,12 @@
                     <p id = 'question_text'>{{ question.question_text }}</p>
                     <input type = "hidden" id= "correct_answer" value = "{{question.answer}}">
                     <input type = "hidden" id = "q_id" value = "{{question.id}}">
-                    <label><input type="radio" name="answer" value="A"> <span id = "opt_a">{{ question.option1 }}</span></label><br>
-                    <label><input type="radio" name="answer" value="B"> <span id = "opt_b">{{ question.option2 }}</span></label><br>
-                    <label><input type="radio" name="answer" value="C"> <span id ="opt_c">{{ question.option3 }}</span></label><br>
-                    <label><input type="radio" name="answer" value="D"> <span id = "opt_d">{{ question.option4 }}</span></label><br>
-                    <button onclick = "checkAnswer()">Submit</button>
+                    <label class = 'option'><input type="radio" name="answer" value="A"> <span id = "opt_a" >{{ question.option1 }}</span></label><br>
+                    <label class = 'option'><input type="radio" name="answer" value="B" > <span id = "opt_b" >{{ question.option2 }}</span></label><br>
+                    <label class = 'option'><input type="radio" name="answer" value="C" > <span id ="opt_c" >{{ question.option3 }}</span></label><br>
+                    <label class = 'option'><input type="radio" name="answer" value="D" > <span id = "opt_d" >{{ question.option4 }}</span></label><br>
+                    <button onclick = "checkAnswer()">Check Answer</button>
+                    <button onclick = "nextQuestion()">Next Question</button>
                     <p id="result"></p>
                     {% else%}
                     <h3>No questions available</h3>

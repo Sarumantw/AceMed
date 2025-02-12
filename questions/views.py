@@ -3,8 +3,9 @@ from .models import question
 from django.http import JsonResponse
 # Create your views here.
 def quiz_view(request, subject):
-    first_question = question.objects.filter(subject=subject).first()
-    return render(request, 'allqs.html', {'question': first_question, 'subject': subject})
+    topic = request.GET.get('topic')
+    first_question = question.objects.filter(subject=subject,topic =topic).first()
+    return render(request, 'allqs.html', {'question': first_question, 'subject': subject, 'topic': topic})
 def check_answers(request):
     if request.method == 'POST':
         questions = question.objects.all()
@@ -15,8 +16,11 @@ def check_answers(request):
         return render(request, 'results', {'score': score})
 def homepage(request):
     return render(request, 'main.html')
-def next_question(request, subject, questionId):
-        next_q = question.objects.filter(subject = subject, id__gt = questionId).first()
+def topic_index(request, subject):
+    topics = question.objects.filter(subject = subject).values_list('topic', flat=True).distinct()
+    return render(request, 'topic_index.html', {'topics': topics, 'subject': subject})
+def next_question(request, subject, questionId,topic):
+        next_q = question.objects.filter(subject = subject,topic=topic, id__gt = questionId).first()
         if next_q:
             return JsonResponse({
                 'id' : next_q.id,
@@ -25,7 +29,8 @@ def next_question(request, subject, questionId):
                 'option2' : next_q.option2,
                 'option3' : next_q.option3,
                 'option4' : next_q.option4,
-                'answer' : next_q.answer })
+                'answer' : next_q.answer,
+                'topic': next_q.topic})
         else: 
            return JsonResponse({
                'end' : True })
