@@ -1,246 +1,247 @@
 from questions.models import question
 questions = [
     [
-        "A 35-year-old male presents with weakness in flexing his thumb and index finger. He also reports numbness in the lateral two-thirds of his palm. Which nerve is most likely affected?",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Median nerve",
-        "Musculocutaneous nerve",
-        "C"
+        "A 35-year-old male presents with difficulty in lifting his arm above 90 degrees. On examination, there is winging of the scapula. Which muscle is most likely affected?",
+        "Pectoralis major",
+        "Serratus anterior",
+        "Latissimus dorsi",
+        "Trapezius",
+        "B"
     ],
     [
-        "A patient complains of difficulty in extending their wrist and fingers after a fracture of the humerus. Which nerve is most likely injured?",
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
+        "A patient complains of pain and weakness in shoulder abduction. On examination, there is a loss of sensation over the lower half of the deltoid. Which nerve is likely injured?",
         "Axillary nerve",
-        "C"
-    ],
-    [
-        "A 40-year-old female presents with tingling and numbness in the medial one-third of her palm and the medial one and a half fingers. Which nerve is likely affected?",
+        "Radial nerve",
         "Median nerve",
         "Ulnar nerve",
-        "Radial nerve",
-        "Musculocutaneous nerve",
-        "B"
-    ],
-    [
-        "A patient has difficulty pronating their forearm and flexing their wrist. Which muscle group is most likely affected?",
-        "Posterior compartment muscles",
-        "Anterior compartment muscles",
-        "Lateral compartment muscles",
-        "Deep posterior compartment muscles",
-        "B"
-    ],
-    [
-        "A patient presents with a deep cut on the anterior forearm, resulting in the inability to flex the distal phalanges of the fingers. Which muscle is most likely injured?",
-        "Flexor digitorum superficialis",
-        "Flexor digitorum profundus",
-        "Flexor carpi ulnaris",
-        "Pronator teres",
-        "B"
-    ],
-    [
-        "A patient has a fracture of the radius and is unable to supinate their forearm. Which muscle is most likely affected?",
-        "Pronator teres",
-        "Supinator",
-        "Brachioradialis",
-        "Flexor carpi radialis",
-        "B"
-    ],
-    [
-        "A patient presents with a laceration on the lateral side of the forearm, resulting in the inability to extend the thumb. Which nerve is most likely injured?",
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Axillary nerve",
-        "C"
-    ],
-    [
-        "A patient has a deep cut on the medial side of the forearm, resulting in the inability to flex the wrist medially. Which muscle is most likely injured?",
-        "Flexor carpi radialis",
-        "Flexor carpi ulnaris",
-        "Palmaris longus",
-        "Pronator teres",
-        "B"
-    ],
-    [
-        "A patient presents with a fracture of the ulna and is unable to flex the distal phalanx of the thumb. Which muscle is most likely affected?",
-        "Flexor pollicis longus",
-        "Flexor digitorum profundus",
-        "Flexor digitorum superficialis",
-        "Pronator quadratus",
         "A"
     ],
     [
-        "A patient has a deep laceration on the posterior forearm, resulting in the inability to extend the fingers. Which muscle group is most likely affected?",
-        "Anterior compartment muscles",
-        "Posterior compartment muscles",
-        "Lateral compartment muscles",
-        "Deep anterior compartment muscles",
-        "B"
+        "A 40-year-old female presents with difficulty in adducting her arm. Which muscle is most likely involved?",
+        "Pectoralis major",
+        "Trapezius",
+        "Supraspinatus",
+        "Infraspinatus",
+        "A"
     ],
     [
-        "A patient presents with a fracture of the humerus and is unable to extend their wrist. Which nerve is most likely injured?",
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
+        "A patient has difficulty in rotating the scapula so that the glenoid cavity faces upward. Which muscle is most likely affected?",
+        "Trapezius (upper fibers)",
+        "Latissimus dorsi",
+        "Rhomboid major",
+        "Teres minor",
+        "A"
+    ],
+    [
+        "A patient presents with a flat shoulder and inability to abduct the arm from 15 degrees. Which nerve is likely damaged?",
         "Axillary nerve",
-        "C"
-    ],
-    [
-        "A patient has a deep cut on the anterior forearm, resulting in the inability to pronate the forearm. Which muscle is most likely injured?",
-        "Pronator teres",
-        "Pronator quadratus",
-        "Supinator",
-        "Brachioradialis",
+        "Radial nerve",
+        "Median nerve",
+        "Ulnar nerve",
         "A"
     ],
     [
-        "A patient presents with a fracture of the radius and is unable to flex the wrist laterally. Which muscle is most likely affected?",
-        "Flexor carpi radialis",
-        "Flexor carpi ulnaris",
-        "Palmaris longus",
-        "Pronator teres",
+        "A patient has difficulty in depressing the scapula. Which muscle is most likely affected?",
+        "Pectoralis minor",
+        "Trapezius (lower fibers)",
+        "Rhomboid major",
+        "Levator scapulae",
+        "B"
+    ],
+    [
+        "A patient presents with difficulty in medial rotation of the arm. Which muscle is most likely involved?",
+        "Subscapularis",
+        "Infraspinatus",
+        "Teres minor",
+        "Supraspinatus",
         "A"
     ],
     [
-        "A patient has a deep laceration on the medial side of the forearm, resulting in the inability to flex the distal phalanges of the medial two fingers. Which muscle is most likely injured?",
-        "Flexor digitorum superficialis",
-        "Flexor digitorum profundus",
-        "Flexor carpi ulnaris",
-        "Pronator teres",
-        "B"
-    ],
-    [
-        "A patient presents with a fracture of the ulna and is unable to flex the wrist medially. Which muscle is most likely affected?",
-        "Flexor carpi radialis",
-        "Flexor carpi ulnaris",
-        "Palmaris longus",
-        "Pronator teres",
-        "B"
-    ],
-    [
-        "A patient has a deep cut on the posterior forearm, resulting in the inability to extend the thumb. Which muscle is most likely injured?",
-        "Extensor pollicis longus",
-        "Extensor pollicis brevis",
-        "Abductor pollicis longus",
-        "Extensor indicis",
+        "A patient has difficulty in retracting the scapula. Which muscle is most likely affected?",
+        "Rhomboid major",
+        "Pectoralis major",
+        "Latissimus dorsi",
+        "Serratus anterior",
         "A"
     ],
     [
-        "A patient presents with a fracture of the radius and is unable to supinate the forearm. Which muscle is most likely affected?",
-        "Pronator teres",
-        "Supinator",
-        "Brachioradialis",
-        "Flexor carpi radialis",
-        "B"
-    ],
-    [
-        "A patient has a deep laceration on the anterior forearm, resulting in the inability to flex the distal phalanges of the fingers. Which muscle is most likely injured?",
-        "Flexor digitorum superficialis",
-        "Flexor digitorum profundus",
-        "Flexor carpi ulnaris",
-        "Pronator teres",
-        "B"
-    ],
-    [
-        "A patient presents with a fracture of the humerus and is unable to extend their fingers. Which nerve is most likely injured?",
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Axillary nerve",
-        "C"
-    ],
-    [
-        "A patient has a deep cut on the medial side of the forearm, resulting in the inability to flex the wrist medially. Which muscle is most likely injured?",
-        "Flexor carpi radialis",
-        "Flexor carpi ulnaris",
-        "Palmaris longus",
-        "Pronator teres",
-        "B"
-    ],
-    [
-        "Which artery is the main blood supply to the anterior compartment of the forearm?",
-        "Radial artery",
-        "Ulnar artery",
-        "Brachial artery",
-        "Posterior interosseous artery",
-        "B"
-    ],
-    [
-        "Which nerve supplies the flexor carpi ulnaris muscle?",
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Musculocutaneous nerve",
-        "B"
-    ],
-    [
-        "Which muscle is responsible for pronation of the forearm?",
-        "Supinator",
-        "Pronator teres",
-        "Brachioradialis",
-        "Flexor carpi radialis",
-        "B"
-    ],
-    [
-        "Which nerve passes through the cubital fossa?",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Median nerve",
-        "Axillary nerve",
-        "C"
-    ],
-    [
-        "Which muscle is innervated by the deep branch of the radial nerve?",
-        "Brachioradialis",
-        "Extensor carpi radialis longus",
-        "Supinator",
-        "Extensor carpi ulnaris",
-        "C"
-    ],
-    [
-        "Which artery anastomoses around the wrist with the radial artery?",
-        "Ulnar artery",
-        "Brachial artery",
-        "Posterior interosseous artery",
-        "Anterior interosseous artery",
+        "A patient presents with difficulty in elevating the scapula. Which muscle is most likely involved?",
+        "Levator scapulae",
+        "Trapezius (upper fibers)",
+        "Rhomboid minor",
+        "Serratus anterior",
         "A"
     ],
     [
-        "Which nerve supplies the skin of the lateral two-thirds of the palm?",
-        "Ulnar nerve",
-        "Median nerve",
-        "Radial nerve",
-        "Musculocutaneous nerve",
-        "B"
+        "A patient has difficulty in extending the arm. Which muscle is most likely affected?",
+        "Latissimus dorsi",
+        "Pectoralis major",
+        "Teres minor",
+        "Supraspinatus",
+        "A"
     ],
     [
-        "Which muscle is part of the deep posterior compartment of the forearm?",
-        "Extensor digitorum",
-        "Extensor carpi ulnaris",
-        "Abductor pollicis longus",
-        "Extensor carpi radialis brevis",
+        "A patient presents with difficulty in protracting the scapula. Which muscle is most likely involved?",
+        "Serratus anterior",
+        "Rhomboid major",
+        "Trapezius",
+        "Levator scapulae",
+        "A"
+    ],
+    [
+        "A patient has difficulty in lateral rotation of the arm. Which muscle is most likely affected?",
+        "Infraspinatus",
+        "Subscapularis",
+        "Teres major",
+        "Pectoralis major",
+        "A"
+    ],
+    [
+        "A patient presents with difficulty in initiating abduction of the arm from 0 to 15 degrees. Which muscle is most likely involved?",
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor",
+        "Subscapularis",
+        "A"
+    ],
+    [
+        "A patient has difficulty in holding the head of the humerus in the glenoid cavity during shoulder movement. Which group of muscles is most likely affected?",
+        "Rotator cuff muscles",
+        "Pectoralis major and minor",
+        "Trapezius and latissimus dorsi",
+        "Serratus anterior and rhomboids",
+        "A"
+    ],
+    [
+        "A patient presents with difficulty in forced inspiration. Which muscle is most likely involved?",
+        "Serratus anterior",
+        "Pectoralis major",
+        "Latissimus dorsi",
+        "Trapezius",
+        "A"
+    ],
+    [
+        "A patient has difficulty in depressing the clavicle. Which muscle is most likely affected?",
+        "Subclavius",
+        "Pectoralis minor",
+        "Trapezius",
+        "Levator scapulae",
+        "A"
+    ],
+    [
+        "A patient presents with difficulty in stabilizing the shoulder joint. Which muscle is most likely involved?",
+        "Subscapularis",
+        "Infraspinatus",
+        "Teres minor",
+        "Supraspinatus",
+        "A"
+    ],
+    [
+        "A patient has difficulty in upward rotation of the scapula during abduction above 90 degrees. Which muscle is most likely affected?",
+        "Serratus anterior",
+        "Trapezius",
+        "Rhomboid major",
+        "Levator scapulae",
+        "A"
+    ],
+    [
+        "A patient presents with difficulty in keeping the medial border of the scapula applied to the chest wall. Which muscle is most likely involved?",
+        "Serratus anterior",
+        "Rhomboid major",
+        "Trapezius",
+        "Levator scapulae",
+        "A"
+    ],
+    [
+        "A patient has difficulty in medial rotation and extension of the arm. Which muscle is most likely affected?",
+        "Teres major",
+        "Infraspinatus",
+        "Supraspinatus",
+        "Subscapularis",
+        "A"
+    ],
+    [
+        "Which muscle originates from the anterior surface of the medial half of the clavicle and inserts into the lateral lip of the bicipital groove of the humerus?",
+        "Pectoralis major",
+        "Pectoralis minor",
+        "Subclavius",
+        "Serratus anterior",
+        "A"
+    ],
+    [
+        "Which nerve supplies the pectoralis major muscle?",
+        "Medial pectoral nerve",
+        "Lateral pectoral nerve",
+        "Both A and B",
+        "Thoracodorsal nerve",
         "C"
     ],
     [
-        "Which nerve is responsible for the sensation of the medial one and a half fingers?",
-        "Median nerve",
-        "Ulnar nerve",
-        "Radial nerve",
-        "Musculocutaneous nerve",
+        "Which muscle is responsible for depression and protraction of the scapula?",
+        "Pectoralis minor",
+        "Pectoralis major",
+        "Subclavius",
+        "Serratus anterior",
+        "A"
+    ],
+    [
+        "Which muscle originates from the 3rd, 4th, and 5th ribs and inserts into the coracoid process of the scapula?",
+        "Pectoralis major",
+        "Pectoralis minor",
+        "Subclavius",
+        "Serratus anterior",
         "B"
     ],
     [
-        "Which artery is a branch of the common interosseous artery?",
-        "Radial artery",
-        "Ulnar artery",
-        "Anterior interosseous artery",
-        "Posterior interosseous artery",
-        "C"
+        "Which muscle is responsible for depressing the clavicle and steadying it during shoulder movements?",
+        "Subclavius",
+        "Pectoralis minor",
+        "Pectoralis major",
+        "Serratus anterior",
+        "A"
+    ],
+    [
+        "Which muscle originates from the posterior part of the iliac crest and inserts into the floor of the intertubercular groove of the humerus?",
+        "Latissimus dorsi",
+        "Trapezius",
+        "Rhomboid major",
+        "Levator scapulae",
+        "A"
+    ],
+    [
+        "Which muscle is responsible for elevation and downward retraction of the scapula?",
+        "Levator scapulae",
+        "Trapezius",
+        "Rhomboid major",
+        "Serratus anterior",
+        "A"
+    ],
+    [
+        "Which muscle originates from the subscapular fossa and inserts into the lesser tuberosity of the humerus?",
+        "Subscapularis",
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor",
+        "A"
+    ],
+    [
+        "Which muscle is responsible for initiating the abduction of the arm from 0 to 15 degrees?",
+        "Supraspinatus",
+        "Infraspinatus",
+        "Teres minor",
+        "Subscapularis",
+        "A"
+    ],
+    [
+        "Which muscle is responsible for lateral rotation of the arm?",
+        "Infraspinatus",
+        "Subscapularis",
+        "Teres major",
+        "Pectoralis major",
+        "A"
     ]
 ]
+
 i=1
 for q in questions:
     
@@ -251,8 +252,8 @@ for q in questions:
                 option4 = q[4],
                 answer = q[5],
                 subject = 1,
-                week = 4,
-                topic = "Forearm"
+                week = 3,
+                topic = "Shoulder and Scapula"
                 )
     x.save()
     print(i)
