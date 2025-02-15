@@ -49,7 +49,9 @@
                     document.getElementById('result').innerText = 'Correct!';
                 } else {
                     document.getElementById('result').innerText = 'Wrong!';
-                }}
+                }
+            document.getElementById('next').innerHTML = '<button onclick="nextQuestion()">Next</button>';
+        }
                 function nextQuestion() {
                     let questionId = document.getElementById('q_id').value;
                     let subject = "{{subject}}";
@@ -70,6 +72,7 @@
                         document.getElementById("q_id").value = data.id;
                         document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
                         document.getElementById('result').innerText = '';
+                        document.getElementById('next').innerHTML = '';
                     }
                 });
             
@@ -92,7 +95,7 @@
                     <label class = 'option'><input type="radio" name="answer" value="C" > <span id ="opt_c" >{{ question.option3 }}</span></label><br>
                     <label class = 'option'><input type="radio" name="answer" value="D" > <span id = "opt_d" >{{ question.option4 }}</span></label><br>
                     <button onclick = "checkAnswer()">Check Answer</button>
-                    <button onclick = "nextQuestion()">Next Question</button>
+                    <span id = 'next'></span>
                     <p id="result"></p>
                     {% else%}
                     <h3>No questions available</h3>
