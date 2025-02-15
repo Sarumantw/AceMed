@@ -1,341 +1,249 @@
 from questions.models import question
-mcqs = [
-    # Case-based questions
+questions = [
     [
-        "A 32-year-old runner complains of pain on the medial side of her lower leg. Examination reveals inflammation of the primary weight-bearing bone in the leg. Which bone is affected?",
-        "Tibia", 
-        "Fibula", 
-        "Femur", 
-        "Patella", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A 35-year-old male presents with weakness in flexing his thumb and index finger. He also reports numbness in the lateral two-thirds of his palm. Which nerve is most likely affected?",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Median nerve",
+        "Musculocutaneous nerve",
+        "C"
     ],
     [
-        "A hiker falls and fractures the lateral malleolus. Which bone is involved?",
-        "Fibula", 
-        "Tibia", 
-        "Calcaneus", 
-        "Talus", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient complains of difficulty in extending their wrist and fingers after a fracture of the humerus. Which nerve is most likely injured?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Axillary nerve",
+        "C"
     ],
     [
-        "A 45-year-old man presents with difficulty dorsiflexing his foot and numbness between his first and second toes. Which nerve is likely injured?",
-        "Deep fibular nerve", 
-        "Superficial fibular nerve", 
-        "Tibial nerve", 
-        "Sural nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A 40-year-old female presents with tingling and numbness in the medial one-third of her palm and the medial one and a half fingers. Which nerve is likely affected?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Musculocutaneous nerve",
+        "B"
     ],
     [
-        "A patient is diagnosed with foot drop and is unable to dorsiflex the foot. Which compartment of the leg contains the affected muscles?",
-        "Anterior compartment", 
-        "Lateral compartment", 
-        "Posterior compartment", 
-        "Deep posterior compartment", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has difficulty pronating their forearm and flexing their wrist. Which muscle group is most likely affected?",
+        "Posterior compartment muscles",
+        "Anterior compartment muscles",
+        "Lateral compartment muscles",
+        "Deep posterior compartment muscles",
+        "B"
     ],
     [
-        "A construction worker suffers a deep laceration to the lateral compartment of the leg. Which nerve is most likely affected?",
-        "Superficial fibular nerve", 
-        "Deep fibular nerve", 
-        "Tibial nerve", 
-        "Saphenous nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a deep cut on the anterior forearm, resulting in the inability to flex the distal phalanges of the fingers. Which muscle is most likely injured?",
+        "Flexor digitorum superficialis",
+        "Flexor digitorum profundus",
+        "Flexor carpi ulnaris",
+        "Pronator teres",
+        "B"
     ],
     [
-        "A patient presents with inability to evert the foot. Which muscle group is likely affected?",
-        "Lateral compartment muscles", 
-        "Anterior compartment muscles", 
-        "Deep posterior compartment muscles", 
-        "Superficial posterior compartment muscles", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a fracture of the radius and is unable to supinate their forearm. Which muscle is most likely affected?",
+        "Pronator teres",
+        "Supinator",
+        "Brachioradialis",
+        "Flexor carpi radialis",
+        "B"
     ],
     [
-        "A 70-year-old man complains of pain and swelling in the posterior leg. Examination reveals a ruptured calcaneal tendon. Which action is impaired?",
-        "Plantarflexion of the foot", 
-        "Dorsiflexion of the foot", 
-        "Inversion of the foot", 
-        "Eversion of the foot", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a laceration on the lateral side of the forearm, resulting in the inability to extend the thumb. Which nerve is most likely injured?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Axillary nerve",
+        "C"
     ],
     [
-        "A patient has numbness over the medial aspect of the leg and foot. Which nerve is most likely involved?",
-        "Saphenous nerve", 
-        "Sural nerve", 
-        "Superficial fibular nerve", 
-        "Tibial nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep cut on the medial side of the forearm, resulting in the inability to flex the wrist medially. Which muscle is most likely injured?",
+        "Flexor carpi radialis",
+        "Flexor carpi ulnaris",
+        "Palmaris longus",
+        "Pronator teres",
+        "B"
     ],
     [
-        "A motorcyclist sustains a fracture to the fibular neck. Which nerve is at risk of injury?",
-        "Common fibular nerve", 
-        "Tibial nerve", 
-        "Saphenous nerve", 
-        "Sural nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a fracture of the ulna and is unable to flex the distal phalanx of the thumb. Which muscle is most likely affected?",
+        "Flexor pollicis longus",
+        "Flexor digitorum profundus",
+        "Flexor digitorum superficialis",
+        "Pronator quadratus",
+        "A"
     ],
     [
-        "A patient complains of pain and inability to extend the toes. Which muscle group is most likely affected?",
-        "Anterior compartment muscles", 
-        "Lateral compartment muscles", 
-        "Superficial posterior compartment muscles", 
-        "Deep posterior compartment muscles", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep laceration on the posterior forearm, resulting in the inability to extend the fingers. Which muscle group is most likely affected?",
+        "Anterior compartment muscles",
+        "Posterior compartment muscles",
+        "Lateral compartment muscles",
+        "Deep anterior compartment muscles",
+        "B"
     ],
     [
-        "A runner complains of shin pain during activity. Inflammation of which structure is most likely responsible?",
-        "Deep fascia of the leg", 
-        "Interosseous membrane", 
-        "Plantar fascia", 
-        "Calcaneal tendon", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a fracture of the humerus and is unable to extend their wrist. Which nerve is most likely injured?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Axillary nerve",
+        "C"
     ],
     [
-        "A patient has difficulty flexing the toes and inversion of the foot. Which compartment of the leg is affected?",
-        "Deep posterior compartment", 
-        "Superficial posterior compartment", 
-        "Lateral compartment", 
-        "Anterior compartment", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep cut on the anterior forearm, resulting in the inability to pronate the forearm. Which muscle is most likely injured?",
+        "Pronator teres",
+        "Pronator quadratus",
+        "Supinator",
+        "Brachioradialis",
+        "A"
     ],
     [
-        "A patient with a fractured tibia has damage to the popliteal artery. Which area of the leg is most at risk of ischemia?",
-        "Posterior compartment", 
-        "Anterior compartment", 
-        "Lateral compartment", 
-        "Medial compartment", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a fracture of the radius and is unable to flex the wrist laterally. Which muscle is most likely affected?",
+        "Flexor carpi radialis",
+        "Flexor carpi ulnaris",
+        "Palmaris longus",
+        "Pronator teres",
+        "A"
     ],
     [
-        "A patient suffers from deep vein thrombosis in the posterior tibial vein. Which condition is most likely to develop?",
-        "Pulmonary embolism", 
-        "Peripheral neuropathy", 
-        "Compartment syndrome", 
-        "Varicose veins", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep laceration on the medial side of the forearm, resulting in the inability to flex the distal phalanges of the medial two fingers. Which muscle is most likely injured?",
+        "Flexor digitorum superficialis",
+        "Flexor digitorum profundus",
+        "Flexor carpi ulnaris",
+        "Pronator teres",
+        "B"
     ],
     [
-        "A patient presents with weakness in plantarflexion and sensory loss in the sole of the foot. Which nerve is damaged?",
-        "Tibial nerve", 
-        "Deep fibular nerve", 
-        "Superficial fibular nerve", 
-        "Sural nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a fracture of the ulna and is unable to flex the wrist medially. Which muscle is most likely affected?",
+        "Flexor carpi radialis",
+        "Flexor carpi ulnaris",
+        "Palmaris longus",
+        "Pronator teres",
+        "B"
     ],
     [
-        "A patient is unable to unlock the knee joint during flexion. Which muscle is affected?",
-        "Popliteus", 
-        "Gastrocnemius", 
-        "Soleus", 
-        "Plantaris", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep cut on the posterior forearm, resulting in the inability to extend the thumb. Which muscle is most likely injured?",
+        "Extensor pollicis longus",
+        "Extensor pollicis brevis",
+        "Abductor pollicis longus",
+        "Extensor indicis",
+        "A"
     ],
     [
-        "A fracture of the tibia results in damage to the nutrient artery. Which structure is most affected?",
-        "Bone marrow", 
-        "Interosseous membrane", 
-        "Deep fascia", 
-        "Articular cartilage", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a fracture of the radius and is unable to supinate the forearm. Which muscle is most likely affected?",
+        "Pronator teres",
+        "Supinator",
+        "Brachioradialis",
+        "Flexor carpi radialis",
+        "B"
     ],
     [
-        "A patient complains of numbness in the web space between the first and second toes. Which nerve is affected?",
-        "Deep fibular nerve", 
-        "Superficial fibular nerve", 
-        "Tibial nerve", 
-        "Sural nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep laceration on the anterior forearm, resulting in the inability to flex the distal phalanges of the fingers. Which muscle is most likely injured?",
+        "Flexor digitorum superficialis",
+        "Flexor digitorum profundus",
+        "Flexor carpi ulnaris",
+        "Pronator teres",
+        "B"
     ],
     [
-        "A patient presents with pain and swelling at the tibial tuberosity. What is the most likely diagnosis?",
-        "Osgood-Schlatter disease", 
-        "Shin splints", 
-        "Compartment syndrome", 
-        "Stress fracture", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient presents with a fracture of the humerus and is unable to extend their fingers. Which nerve is most likely injured?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Axillary nerve",
+        "C"
     ],
     [
-        "A patient has a fracture involving the interosseous membrane of the leg. Which two bones are connected by this structure?",
-        "Tibia and fibula", 
-        "Femur and tibia", 
-        "Fibula and talus", 
-        "Tibia and talus", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
-    ],
-
-    # Direct questions
-    [
-        "Which bone forms the medial malleolus?",
-        "Tibia", 
-        "Fibula", 
-        "Talus", 
-        "Calcaneus", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "A patient has a deep cut on the medial side of the forearm, resulting in the inability to flex the wrist medially. Which muscle is most likely injured?",
+        "Flexor carpi radialis",
+        "Flexor carpi ulnaris",
+        "Palmaris longus",
+        "Pronator teres",
+        "B"
     ],
     [
-        "Which nerve innervates the muscles of the anterior compartment of the leg?",
-        "Deep fibular nerve", 
-        "Superficial fibular nerve", 
-        "Tibial nerve", 
-        "Sural nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which artery is the main blood supply to the anterior compartment of the forearm?",
+        "Radial artery",
+        "Ulnar artery",
+        "Brachial artery",
+        "Posterior interosseous artery",
+        "B"
     ],
     [
-        "Which artery supplies the anterior compartment of the leg?",
-        "Anterior tibial artery", 
-        "Posterior tibial artery", 
-        "Fibular artery", 
-        "Popliteal artery", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which nerve supplies the flexor carpi ulnaris muscle?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Musculocutaneous nerve",
+        "B"
     ],
     [
-        "Which compartment of the leg contains the tibialis posterior muscle?",
-        "Deep posterior compartment", 
-        "Superficial posterior compartment", 
-        "Lateral compartment", 
-        "Anterior compartment", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which muscle is responsible for pronation of the forearm?",
+        "Supinator",
+        "Pronator teres",
+        "Brachioradialis",
+        "Flexor carpi radialis",
+        "B"
     ],
     [
-        "Which muscle is the strongest dorsiflexor of the foot?",
-        "Tibialis anterior", 
-        "Extensor digitorum longus", 
-        "Extensor hallucis longus", 
-        "Fibularis tertius", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which nerve passes through the cubital fossa?",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Median nerve",
+        "Axillary nerve",
+        "C"
     ],
     [
-        "Which vein drains into the small saphenous vein?",
-        "Popliteal vein", 
-        "Great saphenous vein", 
-        "Posterior tibial vein", 
-        "Fibular vein", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which muscle is innervated by the deep branch of the radial nerve?",
+        "Brachioradialis",
+        "Extensor carpi radialis longus",
+        "Supinator",
+        "Extensor carpi ulnaris",
+        "C"
     ],
     [
-        "Which nerve provides sensory innervation to the lateral side of the leg and foot?",
-        "Sural nerve", 
-        "Saphenous nerve", 
-        "Deep fibular nerve", 
-        "Superficial fibular nerve", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which artery anastomoses around the wrist with the radial artery?",
+        "Ulnar artery",
+        "Brachial artery",
+        "Posterior interosseous artery",
+        "Anterior interosseous artery",
+        "A"
     ],
     [
-        "Which artery divides into the posterior tibial and fibular arteries?",
-        "Tibioperoneal trunk", 
-        "Popliteal artery", 
-        "Anterior tibial artery", 
-        "Dorsalis pedis artery", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which nerve supplies the skin of the lateral two-thirds of the palm?",
+        "Ulnar nerve",
+        "Median nerve",
+        "Radial nerve",
+        "Musculocutaneous nerve",
+        "B"
     ],
     [
-        "Which muscle acts to unlock the knee joint?",
-        "Popliteus", 
-        "Gastrocnemius", 
-        "Soleus", 
-        "Plantaris", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which muscle is part of the deep posterior compartment of the forearm?",
+        "Extensor digitorum",
+        "Extensor carpi ulnaris",
+        "Abductor pollicis longus",
+        "Extensor carpi radialis brevis",
+        "C"
     ],
     [
-        "Which structure connects the tibia and fibula along their length?",
-        "Interosseous membrane", 
-        "Deep fascia", 
-        "Plantar fascia", 
-        "Calcaneal tendon", 
-        "A", 
-        "Anatomy", 
-        2, 
-        "Leg"
+        "Which nerve is responsible for the sensation of the medial one and a half fingers?",
+        "Median nerve",
+        "Ulnar nerve",
+        "Radial nerve",
+        "Musculocutaneous nerve",
+        "B"
     ],
+    [
+        "Which artery is a branch of the common interosseous artery?",
+        "Radial artery",
+        "Ulnar artery",
+        "Anterior interosseous artery",
+        "Posterior interosseous artery",
+        "C"
+    ]
 ]
-
-for q in mcqs:
+i=1
+for q in questions:
+    
     x= question(question_text = q[0],
                 option1 = q[1],
                 option2 = q[2],
@@ -343,6 +251,9 @@ for q in mcqs:
                 option4 = q[4],
                 answer = q[5],
                 subject = 1,
-                week = q[7],
-                topic = q[8])
+                week = 4,
+                topic = "Forearm"
+                )
     x.save()
+    print(i)
+    i+=1
