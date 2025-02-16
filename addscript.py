@@ -1,246 +1,247 @@
 from questions.models import question
 questions = [
     [
-        "A 35-year-old male presents with difficulty in lifting his arm above 90 degrees. On examination, there is winging of the scapula. Which muscle is most likely affected?",
-        "Pectoralis major",
-        "Serratus anterior",
-        "Latissimus dorsi",
-        "Trapezius",
-        "B"
-    ],
-    [
-        "A patient complains of pain and weakness in shoulder abduction. On examination, there is a loss of sensation over the lower half of the deltoid. Which nerve is likely injured?",
-        "Axillary nerve",
-        "Radial nerve",
-        "Median nerve",
-        "Ulnar nerve",
-        "A"
-    ],
-    [
-        "A 40-year-old female presents with difficulty in adducting her arm. Which muscle is most likely involved?",
-        "Pectoralis major",
-        "Trapezius",
-        "Supraspinatus",
-        "Infraspinatus",
-        "A"
-    ],
-    [
-        "A patient has difficulty in rotating the scapula so that the glenoid cavity faces upward. Which muscle is most likely affected?",
-        "Trapezius (upper fibers)",
-        "Latissimus dorsi",
-        "Rhomboid major",
-        "Teres minor",
-        "A"
-    ],
-    [
-        "A patient presents with a flat shoulder and inability to abduct the arm from 15 degrees. Which nerve is likely damaged?",
-        "Axillary nerve",
-        "Radial nerve",
-        "Median nerve",
-        "Ulnar nerve",
-        "A"
-    ],
-    [
-        "A patient has difficulty in depressing the scapula. Which muscle is most likely affected?",
-        "Pectoralis minor",
-        "Trapezius (lower fibers)",
-        "Rhomboid major",
-        "Levator scapulae",
-        "B"
-    ],
-    [
-        "A patient presents with difficulty in medial rotation of the arm. Which muscle is most likely involved?",
-        "Subscapularis",
-        "Infraspinatus",
-        "Teres minor",
-        "Supraspinatus",
-        "A"
-    ],
-    [
-        "A patient has difficulty in retracting the scapula. Which muscle is most likely affected?",
-        "Rhomboid major",
-        "Pectoralis major",
-        "Latissimus dorsi",
-        "Serratus anterior",
-        "A"
-    ],
-    [
-        "A patient presents with difficulty in elevating the scapula. Which muscle is most likely involved?",
-        "Levator scapulae",
-        "Trapezius (upper fibers)",
-        "Rhomboid minor",
-        "Serratus anterior",
-        "A"
-    ],
-    [
-        "A patient has difficulty in extending the arm. Which muscle is most likely affected?",
-        "Latissimus dorsi",
-        "Pectoralis major",
-        "Teres minor",
-        "Supraspinatus",
-        "A"
-    ],
-    [
-        "A patient presents with difficulty in protracting the scapula. Which muscle is most likely involved?",
-        "Serratus anterior",
-        "Rhomboid major",
-        "Trapezius",
-        "Levator scapulae",
-        "A"
-    ],
-    [
-        "A patient has difficulty in lateral rotation of the arm. Which muscle is most likely affected?",
-        "Infraspinatus",
-        "Subscapularis",
-        "Teres major",
-        "Pectoralis major",
-        "A"
-    ],
-    [
-        "A patient presents with difficulty in initiating abduction of the arm from 0 to 15 degrees. Which muscle is most likely involved?",
-        "Supraspinatus",
-        "Infraspinatus",
-        "Teres minor",
-        "Subscapularis",
-        "A"
-    ],
-    [
-        "A patient has difficulty in holding the head of the humerus in the glenoid cavity during shoulder movement. Which group of muscles is most likely affected?",
-        "Rotator cuff muscles",
-        "Pectoralis major and minor",
-        "Trapezius and latissimus dorsi",
-        "Serratus anterior and rhomboids",
-        "A"
-    ],
-    [
-        "A patient presents with difficulty in forced inspiration. Which muscle is most likely involved?",
-        "Serratus anterior",
-        "Pectoralis major",
-        "Latissimus dorsi",
-        "Trapezius",
-        "A"
-    ],
-    [
-        "A patient has difficulty in depressing the clavicle. Which muscle is most likely affected?",
-        "Subclavius",
-        "Pectoralis minor",
-        "Trapezius",
-        "Levator scapulae",
-        "A"
-    ],
-    [
-        "A patient presents with difficulty in stabilizing the shoulder joint. Which muscle is most likely involved?",
-        "Subscapularis",
-        "Infraspinatus",
-        "Teres minor",
-        "Supraspinatus",
-        "A"
-    ],
-    [
-        "A patient has difficulty in upward rotation of the scapula during abduction above 90 degrees. Which muscle is most likely affected?",
-        "Serratus anterior",
-        "Trapezius",
-        "Rhomboid major",
-        "Levator scapulae",
-        "A"
-    ],
-    [
-        "A patient presents with difficulty in keeping the medial border of the scapula applied to the chest wall. Which muscle is most likely involved?",
-        "Serratus anterior",
-        "Rhomboid major",
-        "Trapezius",
-        "Levator scapulae",
-        "A"
-    ],
-    [
-        "A patient has difficulty in medial rotation and extension of the arm. Which muscle is most likely affected?",
-        "Teres major",
-        "Infraspinatus",
-        "Supraspinatus",
-        "Subscapularis",
-        "A"
-    ],
-    [
-        "Which muscle originates from the anterior surface of the medial half of the clavicle and inserts into the lateral lip of the bicipital groove of the humerus?",
-        "Pectoralis major",
-        "Pectoralis minor",
-        "Subclavius",
-        "Serratus anterior",
-        "A"
-    ],
-    [
-        "Which nerve supplies the pectoralis major muscle?",
-        "Medial pectoral nerve",
-        "Lateral pectoral nerve",
-        "Both A and B",
-        "Thoracodorsal nerve",
+        "A 50-year-old male presents with difficulty extending his knee and reports frequent falls while walking. Which nerve is most likely affected?",
+        "Obturator nerve",
+        "Sciatic nerve",
+        "Femoral nerve",
+        "Tibial nerve",
         "C"
     ],
     [
-        "Which muscle is responsible for depression and protraction of the scapula?",
-        "Pectoralis minor",
-        "Pectoralis major",
-        "Subclavius",
-        "Serratus anterior",
-        "A"
+        "A patient presents with pain in the medial thigh and weakness in thigh adduction. Which nerve is most likely injured?",
+        "Femoral nerve",
+        "Sciatic nerve",
+        "Obturator nerve",
+        "Lateral femoral cutaneous nerve",
+        "C"
     ],
     [
-        "Which muscle originates from the 3rd, 4th, and 5th ribs and inserts into the coracoid process of the scapula?",
-        "Pectoralis major",
-        "Pectoralis minor",
-        "Subclavius",
-        "Serratus anterior",
+        "A 30-year-old runner complains of pain in the inner thigh and difficulty flexing the knee. Which muscle is most likely affected?",
+        "Sartorius",
+        "Gracilis",
+        "Vastus medialis",
+        "Rectus femoris",
         "B"
     ],
     [
-        "Which muscle is responsible for depressing the clavicle and steadying it during shoulder movements?",
-        "Subclavius",
-        "Pectoralis minor",
-        "Pectoralis major",
-        "Serratus anterior",
+        "A patient presents with a swelling in the femoral triangle. Which structure is most likely involved?",
+        "Femoral nerve",
+        "Femoral artery",
+        "Sartorius muscle",
+        "Iliopsoas muscle",
+        "B"
+    ],
+    [
+        "A young footballer suffers a direct blow to the anterior thigh and experiences difficulty flexing his hip and extending his knee. Which muscle group is likely affected?",
+        "Hamstrings",
+        "Quadriceps femoris",
+        "Adductors",
+        "Gluteal muscles",
+        "B"
+    ],
+    [
+        "A patient undergoes femoral catheterization. What is the most accurate location for puncturing the femoral artery?",
+        "Below the inguinal ligament",
+        "At the level of the adductor hiatus",
+        "In the popliteal fossa",
+        "Above the inguinal ligament",
         "A"
     ],
     [
-        "Which muscle originates from the posterior part of the iliac crest and inserts into the floor of the intertubercular groove of the humerus?",
-        "Latissimus dorsi",
-        "Trapezius",
-        "Rhomboid major",
-        "Levator scapulae",
+        "A 35-year-old female complains of weakness in medial thigh muscles and loss of sensation over the middle third of the medial thigh. Which nerve is likely affected?",
+        "Femoral nerve",
+        "Sciatic nerve",
+        "Obturator nerve",
+        "Tibial nerve",
+        "C"
+    ],
+    [
+        "A patient presents with pain and swelling in the medial thigh and difficulty adducting the leg. Which muscle is most likely affected?",
+        "Rectus femoris",
+        "Adductor longus",
+        "Vastus medialis",
+        "Sartorius",
+        "B"
+    ],
+    [
+        "A patient with a history of deep vein thrombosis has a clot in the femoral vein. Which vein is the direct continuation of this vessel?",
+        "Popliteal vein",
+        "Great saphenous vein",
+        "External iliac vein",
+        "Inferior vena cava",
+        "C"
+    ],
+    [
+        "A patient is diagnosed with a femoral hernia. Which structure is found in the femoral canal?",
+        "Femoral nerve",
+        "Femoral artery",
+        "Femoral vein",
+        "Lymphatic vessels",
+        "D"
+    ],
+    [
+        "A patient presents with difficulty in laterally rotating the thigh. Which muscle is most likely affected?",
+        "Sartorius",
+        "Gracilis",
+        "Obturator externus",
+        "Pectineus",
+        "C"
+    ],
+    [
+        "A 40-year-old male has difficulty walking uphill and reports pain in the anterior thigh. Which muscle is most likely affected?",
+        "Quadriceps femoris",
+        "Hamstrings",
+        "Gracilis",
+        "Adductor longus",
         "A"
     ],
     [
-        "Which muscle is responsible for elevation and downward retraction of the scapula?",
-        "Levator scapulae",
-        "Trapezius",
-        "Rhomboid major",
-        "Serratus anterior",
+        "A 25-year-old athlete presents with knee pain and difficulty extending the leg. Which structure is most likely involved?",
+        "Sartorius muscle",
+        "Vastus lateralis muscle",
+        "Patellar ligament",
+        "Pectineus muscle",
+        "C"
+    ],
+    [
+        "A patient has difficulty maintaining posture while standing due to weak thigh adduction. Which nerve is responsible?",
+        "Sciatic nerve",
+        "Obturator nerve",
+        "Femoral nerve",
+        "Tibial nerve",
+        "B"
+    ],
+    [
+        "A patient complains of pain in the upper thigh. On examination, the femoral artery pulsation is felt at which landmark?",
+        "Lateral to the femoral vein",
+        "Medial to the femoral nerve",
+        "At the midpoint of the inguinal ligament",
+        "Below the adductor canal",
+        "C"
+    ],
+    [
+        "A patient has an injury affecting the posterior division of the obturator nerve. Which muscle will be affected?",
+        "Gracilis",
+        "Adductor longus",
+        "Adductor magnus (pubic part)",
+        "Obturator externus",
+        "D"
+    ],
+    [
+        "A patient presents with swelling in the adductor canal. Which major structure passes through it?",
+        "Popliteal vein",
+        "Femoral artery",
+        "Sciatic nerve",
+        "Inferior epigastric artery",
+        "B"
+    ],
+    [
+        "A patient is diagnosed with a femoral nerve injury. Which action will be most affected?",
+        "Hip adduction",
+        "Knee flexion",
+        "Knee extension",
+        "Hip extension",
+        "C"
+    ],
+    [
+        "A patient has a femoral hernia. What forms the medial border of the femoral triangle?",
+        "Sartorius",
+        "Pectineus",
+        "Adductor longus",
+        "Iliacus",
+        "C"
+    ],
+    [
+        "A 30-year-old athlete presents with difficulty flexing the thigh and extending the knee. Which muscle is most likely affected?",
+        "Sartorius",
+        "Rectus femoris",
+        "Pectineus",
+        "Adductor brevis",
+        "B"
+    ],
+    [
+        "The femoral nerve arises from which spinal roots?",
+        "L2, L3, L4",
+        "L1, L2, L3",
+        "L4, L5, S1",
+        "L5, S1, S2",
         "A"
     ],
     [
-        "Which muscle originates from the subscapular fossa and inserts into the lesser tuberosity of the humerus?",
-        "Subscapularis",
-        "Supraspinatus",
-        "Infraspinatus",
-        "Teres minor",
+        "The adductor canal contains all of the following **except**:",
+        "Femoral artery",
+        "Femoral vein",
+        "Saphenous nerve",
+        "Obturator nerve",
+        "D"
+    ],
+    [
+        "The great saphenous vein drains into which vein?",
+        "Popliteal vein",
+        "External iliac vein",
+        "Femoral vein",
+        "Inferior vena cava",
+        "C"
+    ],
+    [
+        "The femoral triangle is bounded laterally by which structure?",
+        "Adductor longus",
+        "Sartorius",
+        "Inguinal ligament",
+        "Pectineus",
+        "B"
+    ],
+    [
+        "The largest branch of the femoral artery is:",
+        "Profunda femoris artery",
+        "Superficial circumflex iliac artery",
+        "Descending genicular artery",
+        "External pudendal artery",
         "A"
     ],
     [
-        "Which muscle is responsible for initiating the abduction of the arm from 0 to 15 degrees?",
-        "Supraspinatus",
-        "Infraspinatus",
-        "Teres minor",
-        "Subscapularis",
+        "The obturator nerve passes through which structure to enter the thigh?",
+        "Obturator foramen",
+        "Femoral triangle",
+        "Adductor canal",
+        "Popliteal fossa",
         "A"
     ],
     [
-        "Which muscle is responsible for lateral rotation of the arm?",
-        "Infraspinatus",
-        "Subscapularis",
-        "Teres major",
-        "Pectoralis major",
+        "The femoral sheath is derived from:",
+        "Fascia transversalis and fascia iliaca",
+        "External oblique fascia",
+        "Peritoneum",
+        "Deep fascia of thigh",
         "A"
+    ],
+    [
+        "The adductor magnus muscle has a dual nerve supply. Which nerves innervate it?",
+        "Sciatic and obturator nerves",
+        "Femoral and sciatic nerves",
+        "Tibial and femoral nerves",
+        "Common peroneal and tibial nerves",
+        "A"
+    ],
+    [
+        "Which structure passes through the adductor hiatus?",
+        "Femoral artery",
+        "Femoral vein",
+        "Tibial nerve",
+        "Both A and B",
+        "D"
+    ],
+    [
+        "The medial compartment of the thigh primarily performs which action?",
+        "Hip flexion",
+        "Hip extension",
+        "Thigh adduction",
+        "Knee extension",
+        "C"
     ]
 ]
+
 
 i=1
 for q in questions:
@@ -252,8 +253,8 @@ for q in questions:
                 option4 = q[4],
                 answer = q[5],
                 subject = 1,
-                week = 3,
-                topic = "Shoulder and Scapula"
+                week = 1,
+                topic = "Front and medial aspect of thigh",
                 )
     x.save()
     print(i)

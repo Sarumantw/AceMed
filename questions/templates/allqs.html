@@ -33,56 +33,99 @@
             }
         </style>
         <script>
-            function checkAnswer() {
-                let selectedOption = 
-                    document.querySelector('input[name="answer"]:checked');
-                if (!selectedOption) {
-                    alert("Please select a option");
-                
-                return;
+            document.addEventListener("DOMContentLoaded", function() {
+                shuffleOptions(); // Shuffle the options on page load
+            });
+        
+            function shuffleOptions() {
+                let options = [
+                    { letter: "A", text: document.getElementById("opt_a").innerText },
+                    { letter: "B", text: document.getElementById("opt_b").innerText },
+                    { letter: "C", text: document.getElementById("opt_c").innerText },
+                    { letter: "D", text: document.getElementById("opt_d").innerText }
+                ];
+        
+                // Shuffle the options
+                options.sort(() => Math.random() - 0.5);
+        
+                // Update the HTML with shuffled options
+                document.getElementById("opt_a").innerText = options[0].text;
+                document.getElementById("opt_b").innerText = options[1].text;
+                document.getElementById("opt_c").innerText = options[2].text;
+                document.getElementById("opt_d").innerText = options[3].text;
+        
+                // Update radio button values
+                let radios = document.querySelectorAll('input[name="answer"]');
+                radios[0].value = options[0].letter;
+                radios[1].value = options[1].letter;
+                radios[2].value = options[2].letter;
+                radios[3].value = options[3].letter;
+        
+                // Update correct answer reference
+                let correctAnswerText = document.getElementById("correct_answer").value;
+                let newCorrectAnswer = options.find(option => option.text === correctAnswerText).letter;
+                document.getElementById("correct_answer").value = newCorrectAnswer;
             }
+        
+            function checkAnswer() {
+                let selectedOption = document.querySelector('input[name="answer"]:checked');
+                if (!selectedOption) {
+                    alert("Please select an option");
+                    return;
+                }
+        
                 let userAnswer = selectedOption.value;
                 let correctAnswer = document.getElementById("correct_answer").value;
-                let questionId = document.getElementById('q_id').value;
-                let subject = "{{subject}}";
-                if (userAnswer === correctAnswer){
-                    document.getElementById('result').innerText = 'Correct!';
+        
+                if (userAnswer === correctAnswer) {
+                    document.getElementById('result').innerText = '✅ Correct!';
                 } else {
-                    document.getElementById('result').innerText = 'Wrong!';
+                    document.getElementById('result').innerText = '❌ Wrong!';
                 }
-            document.getElementById('next').innerHTML = '<button onclick="nextQuestion()">Next</button>';
-        }
-                function nextQuestion() {
-                    let questionId = document.getElementById('q_id').value;
-                    let subject = "{{subject}}";
-                    let topic = "{{topic}}";
+        
+                document.getElementById('next').innerHTML = '<button onclick="nextQuestion()">Next</button>';
+            }
+        
+            function nextQuestion() {
+                let questionId = document.getElementById('q_id').value;
+                let subject = "{{ subject }}";
+                let topic = "{{ topic }}";
+        
                 fetch(`/questions/quiz/${subject}/${topic}/next/${questionId}`)
-                                                 .then(response => response.json())
-                                                 .then(data => { 
-                                                     if (data.end) {
-                                                         document.getElementById('quiz_container').innerHTML =
-                                                             '<h2>Quiz completed!</h2>';
-                                                     } else {
-                                                         document.getElementById("question_text").innerText = data.question_text;
-                        document.getElementById("opt_a").innerText = data.option1;
-                        document.getElementById("opt_b").innerText = data.option2;
-                        document.getElementById("opt_c").innerText = data.option3;
-                        document.getElementById("opt_d").innerText = data.option4;
-                        document.getElementById("correct_answer").value = data.answer;
-                        document.getElementById("q_id").value = data.id;
-                        document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
-                        document.getElementById('result').innerText = '';
-                        document.getElementById('next').innerHTML = '';
-                    }
-                });
-            
-                    
-            }  
+                    .then(response => response.json())
+                    .then(data => { 
+                        if (data.end) {
+                            document.getElementById('quiz_container').innerHTML =
+                                '<h2>Quiz completed!</h2>';
+                        } else {
+                            document.getElementById("question_text").innerText = data.question_text;
+                            document.getElementById("opt_a").innerText = data.options.A;
+                            document.getElementById("opt_b").innerText = data.options.B;
+                            document.getElementById("opt_c").innerText = data.options.C;
+                            document.getElementById("opt_d").innerText = data.options.D;
+        
+                            document.getElementById("correct_answer").value = data.answer;
+                            document.getElementById("q_id").value = data.id;
+        
+                            // Reset radio buttons
+                            document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
+        
+                            // Clear results and next button
+                            document.getElementById('result').innerText = '';
+                            document.getElementById('next').innerHTML = '';
+        
+                            // Shuffle new question choices
+                            shuffleOptions();
+                        }
+                    });
+            }
         </script>
+        
     </head>
     <body>
         <div class="header">Welcome to the Quiz</div>
         <h1>{{Subject}}</h1>
+        <p id ="tracker"></p>
             {% csrf_token %}
             
                 <div id="quiz_container">
@@ -96,9 +139,11 @@
                     <label class = 'option'><input type="radio" name="answer" value="D" > <span id = "opt_d" >{{ question.option4 }}</span></label><br>
                     <button onclick = "checkAnswer()">Check Answer</button>
                     <span id = 'next'></span>
-                    <p id="result"></p>
+                    <p id="result"></p><br><br><br>
+                    <p><a href="{%url 'homepage'%}">Back to Homepage</p>
                     {% else%}
                     <h3>No questions available</h3>
+                    <p><a href="{%url 'homepage'%}">Back to Homepage</p>
                     {% endif%}
                 </div>
             
