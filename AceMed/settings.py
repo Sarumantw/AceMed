@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+import dj_database_url
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-9jzm&0*baa76g8#wg+9v$b9vgag9(dt3^ptb3l@504x9#4g=^0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['acemed.onrender.com']
+ALLOWED_HOSTS = ['acemed.onrender.com','127.0.0.1',]
 
 
 # Application definition
@@ -74,17 +75,11 @@ WSGI_APPLICATION = 'AceMed.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
-    
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'question_c8x1',
-        'USER': 'question_c8x1_user',
-        'PASSWORD': 'SHKj34spgLIqiZNYZGAjxPdIWbAiU3bW',
-        'HOST': 'postgresql://question_c8x1_user:SHKj34spgLIqiZNYZGAjxPdIWbAiU3bW@dpg-cuot3lpopnds738v4ha0-a.oregon-postgres.render.com/question_c8x1',
-        'PORT': '5432',  # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
 }
+
 
     
 
