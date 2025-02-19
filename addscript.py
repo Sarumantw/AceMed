@@ -1,244 +1,196 @@
 from questions.models import question
 questions = [
     [
-        "A 50-year-old male presents with difficulty extending his knee and reports frequent falls while walking. Which nerve is most likely affected?",
-        "Obturator nerve",
-        "Sciatic nerve",
-        "Femoral nerve",
-        "Tibial nerve",
+        "A 25-year-old woman presents with dysuria and increased urinary frequency. Urinalysis reveals pyuria, and culture identifies a gram-positive, coagulase-negative cocci resistant to novobiocin. What is the most likely pathogen?",
+        "Staphylococcus aureus",
+        "Staphylococcus epidermidis",
+        "Staphylococcus saprophyticus",
+        "Enterococcus faecalis",
         "C"
     ],
     [
-        "A patient presents with pain in the medial thigh and weakness in thigh adduction. Which nerve is most likely injured?",
-        "Femoral nerve",
-        "Sciatic nerve",
-        "Obturator nerve",
-        "Lateral femoral cutaneous nerve",
+        "A 6-year-old boy develops large, fluid-filled blisters on his skin. Gentle pressure causes the epidermis to slough off (positive Nikolsky sign). Which virulence factor is responsible?",
+        "Toxic Shock Syndrome Toxin-1 (TSST-1)",
+        "Panton-Valentine Leukocidin (PVL)",
+        "Exfoliative toxin",
+        "Enterotoxin A",
         "C"
     ],
     [
-        "A 30-year-old runner complains of pain in the inner thigh and difficulty flexing the knee. Which muscle is most likely affected?",
-        "Sartorius",
-        "Gracilis",
-        "Vastus medialis",
-        "Rectus femoris",
+        "A 30-year-old man with a prosthetic heart valve presents with fever and a new heart murmur. Blood cultures reveal coagulase-negative staphylococci. Which pathogen is most likely responsible?",
+        "Staphylococcus aureus",
+        "Staphylococcus epidermidis",
+        "Staphylococcus saprophyticus",
+        "Streptococcus viridans",
         "B"
     ],
     [
-        "A patient presents with a swelling in the femoral triangle. Which structure is most likely involved?",
-        "Femoral nerve",
-        "Femoral artery",
-        "Sartorius muscle",
-        "Iliopsoas muscle",
+        "A patient who recently had a pacemaker implanted develops a bloodstream infection. The isolated bacteria are gram-positive cocci that form biofilms on medical devices. What is the most likely organism?",
+        "Staphylococcus aureus",
+        "Staphylococcus epidermidis",
+        "Staphylococcus saprophyticus",
+        "Streptococcus pyogenes",
         "B"
     ],
     [
-        "A young footballer suffers a direct blow to the anterior thigh and experiences difficulty flexing his hip and extending his knee. Which muscle group is likely affected?",
-        "Hamstrings",
-        "Quadriceps femoris",
-        "Adductors",
-        "Gluteal muscles",
-        "B"
-    ],
-    [
-        "A patient undergoes femoral catheterization. What is the most accurate location for puncturing the femoral artery?",
-        "Below the inguinal ligament",
-        "At the level of the adductor hiatus",
-        "In the popliteal fossa",
-        "Above the inguinal ligament",
-        "A"
-    ],
-    [
-        "A 35-year-old female complains of weakness in medial thigh muscles and loss of sensation over the middle third of the medial thigh. Which nerve is likely affected?",
-        "Femoral nerve",
-        "Sciatic nerve",
-        "Obturator nerve",
-        "Tibial nerve",
-        "C"
-    ],
-    [
-        "A patient presents with pain and swelling in the medial thigh and difficulty adducting the leg. Which muscle is most likely affected?",
-        "Rectus femoris",
-        "Adductor longus",
-        "Vastus medialis",
-        "Sartorius",
-        "B"
-    ],
-    [
-        "A patient with a history of deep vein thrombosis has a clot in the femoral vein. Which vein is the direct continuation of this vessel?",
-        "Popliteal vein",
-        "Great saphenous vein",
-        "External iliac vein",
-        "Inferior vena cava",
-        "C"
-    ],
-    [
-        "A patient is diagnosed with a femoral hernia. Which structure is found in the femoral canal?",
-        "Femoral nerve",
-        "Femoral artery",
-        "Femoral vein",
-        "Lymphatic vessels",
+        "A 40-year-old man develops sudden-onset fever, hypotension, and a diffuse erythematous rash. He recently had nasal packing for a nosebleed. What is the most likely toxin responsible?",
+        "Panton-Valentine Leukocidin",
+        "Exfoliative toxin",
+        "Enterotoxin A",
+        "Toxic Shock Syndrome Toxin-1 (TSST-1)",
         "D"
     ],
     [
-        "A patient presents with difficulty in laterally rotating the thigh. Which muscle is most likely affected?",
-        "Sartorius",
-        "Gracilis",
-        "Obturator externus",
-        "Pectineus",
-        "C"
-    ],
-    [
-        "A 40-year-old male has difficulty walking uphill and reports pain in the anterior thigh. Which muscle is most likely affected?",
-        "Quadriceps femoris",
-        "Hamstrings",
-        "Gracilis",
-        "Adductor longus",
-        "A"
-    ],
-    [
-        "A 25-year-old athlete presents with knee pain and difficulty extending the leg. Which structure is most likely involved?",
-        "Sartorius muscle",
-        "Vastus lateralis muscle",
-        "Patellar ligament",
-        "Pectineus muscle",
-        "C"
-    ],
-    [
-        "A patient has difficulty maintaining posture while standing due to weak thigh adduction. Which nerve is responsible?",
-        "Sciatic nerve",
-        "Obturator nerve",
-        "Femoral nerve",
-        "Tibial nerve",
+        "A young woman presents with acute cystitis. Her urine culture grows a novobiocin-resistant, coagulase-negative, gram-positive cocci. What is the first-line treatment?",
+        "Vancomycin",
+        "Trimethoprim-Sulfamethoxazole",
+        "Daptomycin",
+        "Ceftriaxone",
         "B"
     ],
     [
-        "A patient complains of pain in the upper thigh. On examination, the femoral artery pulsation is felt at which landmark?",
-        "Lateral to the femoral vein",
-        "Medial to the femoral nerve",
-        "At the midpoint of the inguinal ligament",
-        "Below the adductor canal",
+        "A hospitalized patient on a ventilator develops pneumonia. Cultures reveal a gram-positive, coagulase-positive cocci resistant to methicillin. What is the mechanism of resistance?",
+        "Efflux pumps",
+        "PBP2a production from the mecA gene",
+        "Beta-lactamase production",
+        "Altered ribosomal binding sites",
+        "B"
+    ],
+    [
+        "A neonate in the NICU develops sepsis. The causative organism forms biofilms on central lines and is coagulase-negative. What is the most likely pathogen?",
+        "Staphylococcus aureus",
+        "Staphylococcus epidermidis",
+        "Staphylococcus saprophyticus",
+        "Streptococcus agalactiae",
+        "B"
+    ],
+    [
+        "A 17-year-old boy presents with a large, painful, pus-filled abscess on his leg after a football injury. Gram stain shows gram-positive cocci in clusters. What is the most likely organism?",
+        "Streptococcus pyogenes",
+        "Staphylococcus aureus",
+        "Pseudomonas aeruginosa",
+        "Enterococcus faecalis",
+        "B"
+    ],
+    [
+        "A patient develops food poisoning with vomiting within hours of eating contaminated food. No bacteria are found in the stool. What is the causative agent?",
+        "Clostridium botulinum",
+        "Bacillus cereus",
+        "Staphylococcus aureus",
+        "Salmonella enterica",
         "C"
     ],
     [
-        "A patient has an injury affecting the posterior division of the obturator nerve. Which muscle will be affected?",
-        "Gracilis",
-        "Adductor longus",
-        "Adductor magnus (pubic part)",
-        "Obturator externus",
+        "A 45-year-old diabetic man develops osteomyelitis following a foot ulcer infection. Culture shows coagulase-positive gram-positive cocci. What is the most likely pathogen?",
+        "Staphylococcus epidermidis",
+        "Staphylococcus saprophyticus",
+        "Staphylococcus aureus",
+        "Streptococcus pyogenes",
+        "C"
+    ],
+    [
+        "A 3-year-old child presents with extensive skin peeling following a minor infection. The causative bacteria produce exfoliative toxins that cleave desmoglein-1. What is the diagnosis?",
+        "Scarlet fever",
+        "Staphylococcal Scalded Skin Syndrome (SSSS)",
+        "Bullous impetigo",
+        "Toxic Shock Syndrome",
+        "B"
+    ],
+    [
+        "A woman with a history of recurrent UTIs is diagnosed with Staphylococcus saprophyticus. What distinguishes this pathogen from other coagulase-negative staphylococci?",
+        "Biofilm formation",
+        "Novobiocin resistance",
+        "Coagulase positivity",
+        "Exotoxin production",
+        "B"
+    ],
+    [
+        "A 65-year-old man with a prosthetic knee joint develops persistent joint pain and swelling. Culture shows a biofilm-forming staphylococcal species. What is the best antibiotic choice?",
+        "Amoxicillin",
+        "Rifampin + Vancomycin",
+        "Azithromycin",
+        "Metronidazole",
+        "B"
+    ],
+    [
+        "A nurse in the ICU tests positive for MRSA colonization. What is the best decolonization strategy?",
+        "IV vancomycin",
+        "Linezolid",
+        "Topical mupirocin and chlorhexidine washes",
+        "Ciprofloxacin",
+        "C"
+    ],
+    [
+        "A 50-year-old woman presents with pneumonia following a viral illness. Culture shows gram-positive, coagulase-positive cocci. What is the most likely pathogen?",
+        "Streptococcus pneumoniae",
+        "Klebsiella pneumoniae",
+        "Staphylococcus aureus",
+        "Pseudomonas aeruginosa",
+        "C"
+    ],
+    [
+        "A patient with endocarditis caused by MRSA is started on vancomycin. After a few days, the infection worsens despite appropriate dosing. What resistance mechanism is likely involved?",
+        "PBP2a production",
+        "Beta-lactamase production",
+        "VanA gene-mediated resistance",
+        "Altered ribosomal binding sites",
+        "C"
+    ],
+    [
+        "A patient develops a wound infection after surgery. The isolated bacteria are gram-positive, coagulase-positive, and methicillin-resistant. What is the drug of choice?",
+        "Vancomycin",
+        "Penicillin",
+        "Amoxicillin",
+        "Ceftriaxone",
+        "A"
+    ],
+    [
+        "A burn patient develops a sepsis-like syndrome caused by a toxin-producing staphylococcal strain. What toxin is responsible?",
+        "Exfoliative toxin",
+        "Enterotoxin A",
+        "Panton-Valentine Leukocidin",
+        "Toxic Shock Syndrome Toxin-1",
         "D"
     ],
     [
-        "A patient presents with swelling in the adductor canal. Which major structure passes through it?",
-        "Popliteal vein",
-        "Femoral artery",
-        "Sciatic nerve",
-        "Inferior epigastric artery",
+        "A 35-year-old patient presents with high fever and purulent arthritis. Joint aspiration grows gram-positive cocci in clusters. What is the most common causative organism?",
+        "Streptococcus pyogenes",
+        "Neisseria gonorrhoeae",
+        "Staphylococcus aureus",
+        "Escherichia coli",
+        "C"
+    ],
+    [
+        "Which staphylococcal species is novobiocin-resistant?",
+        "Staphylococcus aureus",
+        "Staphylococcus epidermidis",
+        "Staphylococcus saprophyticus",
+        "Streptococcus pyogenes",
+        "C"
+    ],
+    [
+        "What is the major virulence factor of MRSA?",
+        "Protein A",
+        "PBP2a",
+        "Exfoliative toxin",
+        "Enterotoxin",
         "B"
     ],
     [
-        "A patient is diagnosed with a femoral nerve injury. Which action will be most affected?",
-        "Hip adduction",
-        "Knee flexion",
-        "Knee extension",
-        "Hip extension",
-        "C"
-    ],
-    [
-        "A patient has a femoral hernia. What forms the medial border of the femoral triangle?",
-        "Sartorius",
-        "Pectineus",
-        "Adductor longus",
-        "Iliacus",
-        "C"
-    ],
-    [
-        "A 30-year-old athlete presents with difficulty flexing the thigh and extending the knee. Which muscle is most likely affected?",
-        "Sartorius",
-        "Rectus femoris",
-        "Pectineus",
-        "Adductor brevis",
+        "What enzyme differentiates Staphylococcus aureus from other staphylococci?",
+        "Catalase",
+        "Coagulase",
+        "Urease",
+        "Hemolysin",
         "B"
     ],
     [
-        "The femoral nerve arises from which spinal roots?",
-        "L2, L3, L4",
-        "L1, L2, L3",
-        "L4, L5, S1",
-        "L5, S1, S2",
-        "A"
-    ],
-    [
-        "The adductor canal contains all of the following **except**:",
-        "Femoral artery",
-        "Femoral vein",
-        "Saphenous nerve",
-        "Obturator nerve",
-        "D"
-    ],
-    [
-        "The great saphenous vein drains into which vein?",
-        "Popliteal vein",
-        "External iliac vein",
-        "Femoral vein",
-        "Inferior vena cava",
-        "C"
-    ],
-    [
-        "The femoral triangle is bounded laterally by which structure?",
-        "Adductor longus",
-        "Sartorius",
-        "Inguinal ligament",
-        "Pectineus",
+        "What is the first-line treatment for MRSA infections?",
+        "Penicillin",
+        "Vancomycin",
+        "Amoxicillin",
+        "Ceftriaxone",
         "B"
-    ],
-    [
-        "The largest branch of the femoral artery is:",
-        "Profunda femoris artery",
-        "Superficial circumflex iliac artery",
-        "Descending genicular artery",
-        "External pudendal artery",
-        "A"
-    ],
-    [
-        "The obturator nerve passes through which structure to enter the thigh?",
-        "Obturator foramen",
-        "Femoral triangle",
-        "Adductor canal",
-        "Popliteal fossa",
-        "A"
-    ],
-    [
-        "The femoral sheath is derived from:",
-        "Fascia transversalis and fascia iliaca",
-        "External oblique fascia",
-        "Peritoneum",
-        "Deep fascia of thigh",
-        "A"
-    ],
-    [
-        "The adductor magnus muscle has a dual nerve supply. Which nerves innervate it?",
-        "Sciatic and obturator nerves",
-        "Femoral and sciatic nerves",
-        "Tibial and femoral nerves",
-        "Common peroneal and tibial nerves",
-        "A"
-    ],
-    [
-        "Which structure passes through the adductor hiatus?",
-        "Femoral artery",
-        "Femoral vein",
-        "Tibial nerve",
-        "Both A and B",
-        "D"
-    ],
-    [
-        "The medial compartment of the thigh primarily performs which action?",
-        "Hip flexion",
-        "Hip extension",
-        "Thigh adduction",
-        "Knee extension",
-        "C"
     ]
 ]
 
@@ -252,9 +204,9 @@ for q in questions:
                 option3 = q[3],
                 option4 = q[4],
                 answer = q[5],
-                subject = 1,
-                week = 1,
-                topic = "Front and medial aspect of thigh",
+                subject = 6,
+                week = 5,
+                topic = "Staphylococcus",
                 )
     x.save()
     print(i)
